@@ -16,13 +16,14 @@
 
 package com.example.android.lifecycles.step3;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.android.codelabs.lifecycle.R;
 
@@ -54,5 +55,6 @@ public class ChronoActivity3 extends AppCompatActivity {
         };
 
         //TODO: observe the ViewModel's elapsed time
+        mLiveDataTimerViewModel.getElapsedTime().observe(this, elapsedTimeObserver);
     }
 }
